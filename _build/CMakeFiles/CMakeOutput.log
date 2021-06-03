@@ -403,3 +403,107 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4a08c/fast && /usr/bin/make  -f CMakeFiles/cmTC_4a08c.dir/build.make CMakeFiles/cmTC_4a08c.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a08c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_4a08c.dir/CheckIncludeFile.c.o -c /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4a08c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a08c.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_4a08c.dir/CheckIncludeFile.c.o -o cmTC_4a08c 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2bcb8/fast && /usr/bin/make  -f CMakeFiles/cmTC_2bcb8.dir/build.make CMakeFiles/cmTC_2bcb8.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bcb8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_2bcb8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2bcb8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bcb8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_2bcb8.dir/CheckFunctionExists.c.o -o cmTC_2bcb8  -lpthread 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS_WITHOUT_LIB succeeded with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c660b/fast && /usr/bin/make  -f CMakeFiles/cmTC_c660b.dir/build.make CMakeFiles/cmTC_c660b.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c660b.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_ATOMICS_WITHOUT_LIB  -std=c++11 -o CMakeFiles/cmTC_c660b.dir/src.cxx.o -c /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c660b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c660b.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_c660b.dir/src.cxx.o -o cmTC_c660b 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <atomic>
+#include <cstdint>
+std::atomic<std::uint64_t> x(0);
+int main() {
+  std::uint64_t i = x.load(std::memory_order_relaxed);
+  return static_cast<int>(i);
+}
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_077f9/fast && /usr/bin/make  -f CMakeFiles/cmTC_077f9.dir/build.make CMakeFiles/cmTC_077f9.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_077f9.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -fvisibility=hidden -std=c++11 -o CMakeFiles/cmTC_077f9.dir/src.cxx.o -c /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_077f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_077f9.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_077f9.dir/src.cxx.o -o cmTC_077f9 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7bf1e/fast && /usr/bin/make  -f CMakeFiles/cmTC_7bf1e.dir/build.make CMakeFiles/cmTC_7bf1e.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7bf1e.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -fvisibility-inlines-hidden -std=c++11 -o CMakeFiles/cmTC_7bf1e.dir/src.cxx.o -c /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7bf1e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7bf1e.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_7bf1e.dir/src.cxx.o -o cmTC_7bf1e 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8102c/fast && /usr/bin/make  -f CMakeFiles/cmTC_8102c.dir/build.make CMakeFiles/cmTC_8102c.dir/build
+make[1]: Entering directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8102c.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++11 -o CMakeFiles/cmTC_8102c.dir/src.cxx.o -c /home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx
+/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx:2:34: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+    2 |     int main() { return somefunc();}
+      |                                  ^
+/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+    1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+      |                                     ^~~~~~~~
+Linking CXX executable cmTC_8102c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8102c.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_8102c.dir/src.cxx.o -o cmTC_8102c 
+make[1]: Leaving directory '/home/jackshen/Dev/prometheusTest/_build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
